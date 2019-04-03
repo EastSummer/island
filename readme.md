@@ -1,10 +1,30 @@
 ### 一些规范
 
+### Event
+1. [事件分类](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html?search-key=%E4%BA%8B%E4%BB%B6%E5%88%86%E7%B1%BB)
+2. 事件绑定
+   * ```bind```不会阻止冒泡事件向上冒泡
+   * ```catch```可以阻止冒泡事件向上冒泡
+
+### 组件
+1. [Component构造器](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html?search-key=properties)
+   * properties：组件的对外属性
+   * data：组件的内部数据
+   * methods：组件的方法
+2. [生命周期](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/lifetimes.html)
+
+### Api
+1. [发起请求(wx.request)](https://developers.weixin.qq.com/miniprogram/dev/api/wx.request.html)
 
 ### Tips
-
-1. 命名规范（本项目中以 ```v-``` 开头）
+1. 命名规范
+    * 项目中以 ```v-``` 开头
+    * 项目中以 ```_``` 开头的方法表示为私有方法
 2. ```<image />``` 默认300*250
 3. 尺寸单位用 ```rpx```(自适应单位)
 4. 在以iPhone6(```width:750px height:1334px```)为标准的设计稿中```rpx===px/2```
 5. 默认字体：iphone-苹方 Android-思源
+6. 只有```font color```会被组件继承
+7. [npm支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
+
+### [IMOOC-WX](https://coding.imooc.com/learn/list/251.html)

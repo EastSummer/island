@@ -1,7 +1,9 @@
 /* components/like/index.wxss */
 
 .container {
-  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10rpx;
 }
 
 .container image {
@@ -11,8 +13,9 @@
 
 .container text {
   font-size: 24rpx;
+  line-height: 24rpx;  /* 消除文字上下空白间距 */
   color: #bbb;
-  /* position: absolute;
-  top: 0;
-  right: 0; */
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
 }
