@@ -1,0 +1,18 @@
+/* components/like/index.wxss */
+
+.container {
+  position: relative;
+}
+
+.container image {
+  width: 32rpx;
+  height: 28rpx;
+}
+
+.container text {
+  font-size: 24rpx;
+  color: #bbb;
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+}
