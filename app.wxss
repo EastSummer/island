@@ -1,6 +1,5 @@
 /**app.wxss**/
 page {
-  /* font-family: "PingFangSC-Thin"; */
-  font-family: "DFKai-SB";  /* 标楷体 */
+  font-family: "PingFangSC-Thin";
   font-size: 32rpx;
 }

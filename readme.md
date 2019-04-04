@@ -2,6 +2,11 @@
 
 ### [数据绑定](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/data.html)
 
+### [视图结构](https://developers.weixin.qq.com/miniprogram/dev/framework/view/)
+1. WXML
+2. WXSS
+3. WXS(star)(事例可见```episode```组件)
+
 ### Event
 1. [事件分类](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html)
 2. 事件绑定
@@ -30,5 +35,6 @@
 5. 默认字体：iphone-苹方 Android-思源
 6. 只有```font color```会被组件继承
 7. [npm支持](https://developers.weixin.qq.com/miniprogram/dev/devtools/npm.html)
+8. 小程序将```properties```和```data```做了合并处理，指向同一个对象
 
 ### [IMOOC-WX](https://coding.imooc.com/learn/list/251.html)

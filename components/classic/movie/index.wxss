@@ -21,6 +21,7 @@
 
 .content {
   font-size: 36rpx;
+  font-family: "DFKai-SB";  /* 标楷体 */
   max-width: 550rpx;
   text-indent: 36rpx;
 }
