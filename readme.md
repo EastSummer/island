@@ -1,17 +1,20 @@
 ### 一些规范
 
+### [数据绑定](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/data.html)
+
 ### Event
-1. [事件分类](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html?search-key=%E4%BA%8B%E4%BB%B6%E5%88%86%E7%B1%BB)
+1. [事件分类](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html)
 2. 事件绑定
    * ```bind```不会阻止冒泡事件向上冒泡
    * ```catch```可以阻止冒泡事件向上冒泡
 
 ### 组件
-1. [Component构造器](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html?search-key=properties)
+1. [Component构造器](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/component.html)
    * properties：组件的对外属性
    * data：组件的内部数据
    * methods：组件的方法
 2. [生命周期](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/lifetimes.html)
+3. [自定义事件](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/events.html)
 
 ### Api
 1. [发起请求(wx.request)](https://developers.weixin.qq.com/miniprogram/dev/api/wx.request.html)

@@ -11,7 +11,7 @@ const errCodeTip = {
  * @param url
  * @param data 往后台传递的 json 参数
  * @param method 可选参数项 默认GET
- * @param success 成功后的回调函数
+ * @param success 可选参数项 成功后的回调函数
  * @param fail 失败后的回调函数
  */
 export default class HTTP {
@@ -29,7 +29,7 @@ export default class HTTP {
       success: res => {
         let code = res.statusCode.toString()
         if(code.startsWith('2')){
-          success(res.data)
+          success && success(res.data)
         }else {
           // 服务器异常
           this._show_error(res.data.error_code)

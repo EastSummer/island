@@ -30,6 +30,9 @@ Component({
         count: like ? count-1 : count+1,
         like: !like,
       })
+      // 激活事件
+      let behavior = like ? 'cancel' : 'like'
+      this.triggerEvent('like', { behavior }, {})
     }
   }
 })
