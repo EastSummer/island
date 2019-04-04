@@ -11,6 +11,8 @@ Page({
    */
   data: {
     classic: null,
+    latest: true,
+    first: false,
   },
 
   /**
@@ -27,6 +29,14 @@ Page({
     const { behavior } = event.detail
     const { id, type } = this.data.classic
     likeModel.like(behavior, id, type)
+  },
+
+  onNext() {
+
+  },
+
+  onPrevious() {
+
   },
 
   /**

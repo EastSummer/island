@@ -26,7 +26,7 @@
     margin-top: 6rpx;
 }
 
-.navi {
+.nav {
     position: absolute;
     bottom: 40rpx;
 }

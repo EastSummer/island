@@ -1,13 +1,26 @@
-<view class='header'>
-  <v-episode
-    class='episode'
-    index='{{classic.index}}'
+<view class='container'>
+  <view class='header'>
+    <v-episode
+      class='episode'
+      index='{{classic.index}}'
+    />
+    <v-like
+      class='like'
+      bind:like='onLike'
+      like='{{classic.like_status}}'
+      count='{{classic.fav_nums}}'
+    />
+  </view>
+  <v-movie
+    img='{{classic.image}}'
+    content='{{classic.content}}'
   />
-  <v-like
-    class='like'
-    bind:like='onLike'
-    like='{{classic.like_status}}'
-    count='{{classic.fav_nums}}'
+  <v-nav
+    class='nav'
+    title='{{classic.title}}'
+    first='{{first}}'
+    latest='{{latest}}'
+    bind:left='onNext'
+    bind:right='onPrevious'
   />
 </view>
-<v-movie img='{{classic.image}}' content='{{classic.content}}' />
