@@ -24,6 +24,8 @@
 ### Api
 1. [发起请求(wx.request)](https://developers.weixin.qq.com/miniprogram/dev/api/wx.request.html)
 
+### [Storage](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/storage.html)
+
 ### Tips
 1. 命名规范
     * 项目中以 ```v-``` 开头

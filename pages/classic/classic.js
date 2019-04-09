@@ -25,18 +25,28 @@ Page({
   },
 
   onLike(event) {
-    console.log(event)
     const { behavior } = event.detail
     const { id, type } = this.data.classic
     likeModel.like(behavior, id, type)
   },
 
   onNext() {
-
+    this._updateClassic('next')
   },
 
   onPrevious() {
+    this._updateClassic('previous')
+  },
 
+  _updateClassic(nextOrPrevious) {
+    const { index } = this.data.classic
+    classicModel.getClassic(index, nextOrPrevious, res => {
+      this.setData({
+        classic: res,
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index),
+      })
+    })
   },
 
   /**
