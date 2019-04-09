@@ -7,8 +7,8 @@
     <v-like
       class='like'
       bind:like='onLike'
-      like='{{classic.like_status}}'
-      count='{{classic.fav_nums}}'
+      like='{{likeStatus}}'
+      count='{{likeCount}}'
     />
   </view>
   <v-movie

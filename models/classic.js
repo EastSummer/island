@@ -7,15 +7,27 @@ export default class ClassicModel extends HTTP {
       success: res => {
         cb(res)
         this._setLatestIndex(res.index)
+        const key = this._getKey(res.index)
+        wx.setStorageSync(key, res)
       }
     })
   }
 
   getClassic(index, nextOrPrevious, cb) {
-    this.request({
-      url: `classic/${index}/${nextOrPrevious}`,
-      success: res => cb(res)
-    })
+    // 查找缓存 or API->保存到缓存
+    const key = this._getKey(nextOrPrevious==='next' ? index+1 : index-1)
+    const classic = wx.getStorageSync(key)
+    if( !classic ) {
+      this.request({
+        url: `classic/${index}/${nextOrPrevious}`,
+        success: res => {
+          wx.setStorageSync(this._getKey(res.index), res)
+          cb(res)
+        }
+      })
+    } else {
+      cb(classic)
+    }
   }
 
   isFirst(index) {
@@ -35,5 +47,10 @@ export default class ClassicModel extends HTTP {
 
   _getLatestIndex() {
     return wx.getStorageSync('latest')
+  }
+
+  // 产生缓存期刊的key
+  _getKey(index) {
+    return `classic-${index}`
   }
 }
