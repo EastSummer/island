@@ -13,7 +13,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    playing: false,
+    pauseSrc: 'images/player@pause.png',
+    playSrc: 'images/player@play.png',
   },
 
   /**
