@@ -12,6 +12,17 @@
     />
   </view>
   <v-movie
+    hidden='{{classic.type !== 100}}'
+    img='{{classic.image}}'
+    content='{{classic.content}}'
+  />
+  <v-music
+    hidden='{{classic.type !== 200}}'
+    img='{{classic.image}}'
+    content='{{classic.content}}'
+  />
+  <v-essay
+    hidden='{{classic.type !== 300}}'
     img='{{classic.image}}'
     content='{{classic.content}}'
   />
