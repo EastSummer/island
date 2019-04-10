@@ -46,7 +46,7 @@ export default class HTTP {
   _show_error(code){
     if (!code) code = 1
     wx.showToast({
-      title: errCodeTip[code],
+      title: errCodeTip[code] || errCodeTip[1],
       icon: 'none',
       duration: 2000,
     })
