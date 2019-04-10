@@ -23,6 +23,7 @@
 
 ### Api
 1. [发起请求(wx.request)](https://developers.weixin.qq.com/miniprogram/dev/api/wx.request.html)
+2. [背景音频(BackgroundAudioManager)](https://developers.weixin.qq.com/miniprogram/dev/api/BackgroundAudioManager.html)
 
 ### [Storage](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/storage.html)
 
