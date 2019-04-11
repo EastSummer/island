@@ -1,15 +1,16 @@
 <!--wxml-->
-<wxs module="wxs">
+<!-- <wxs module="until">
   module.exports.toString = function(index) {
     return index < 10 ? '0'+index : index.toString();
   }
-</wxs>
+</wxs> -->
+<wxs src="../../util/filter.wxs" module="until" />
 
 <!-- 调用 wxs 里面的 toSring 函数，参数为 index -->
 <view class="container">
   <view class="index-container">
     <text class="plain">No.</text>
-    <text class="index">{{wxs.toString(index)}}</text>
+    <text class="index">{{until.toString(index)}}</text>
     <view class="line"></view>
   </view>
   <view class="date-container">

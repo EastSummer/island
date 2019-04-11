@@ -1,11 +1,14 @@
-// components/book/index.js
+// components/tag/index.js
 Component({
   /**
    * 组件的属性列表
    */
+  options: {
+    multipleSlots: true,
+  },
+  externalClasses: ['tag-class'],
   properties: {
-    book: Object,
-
+    text: String
   },
 
   /**
@@ -20,10 +23,8 @@ Component({
    */
   methods: {
     onTap(event) {
-      const { id } = this.properties.book
-      // 方便但是降低了组件的通用性
-      wx.navigateTo({
-        url: `/pages/book-detail/book-detail?bid=${id}`,
+      this.triggerEvent('tapping', {
+        text: this.properties.text
       })
     },
   }

@@ -1,0 +1,21 @@
+
+<wxs src="../../util/filter.wxs" module="util" />
+
+<view class="container">
+  <view class="head">
+    <image src="{{book.image}}"></image>
+    <text class='title'>{{book.title}}</text>
+    <text class='author'>{{book.author}}</text>
+  </view>
+  <view class="sub-container">
+    <text class="headline">短评</text>
+    <text class="shadow" wx:if="{{comments === false}}">还没有短评</text>
+    <view class="comment-container">
+      <block wx:for="{{util.limit(comments, 10)}}" wx:key="content">
+        <v-tag tag-class="{{util.highlight(index)}}" text="{{item.content}}">
+          <text class="num" slot="after">{{'+'+item.nums}}</text>
+        </v-tag>
+      </block>
+    </view>
+  </view>
+</view>
