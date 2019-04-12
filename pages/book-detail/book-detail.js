@@ -45,45 +45,42 @@ Page({
     likeModel.like(behavior, this.data.book.id, 400) 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onFakePost(event) {
+    this.setData({ posting: true })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onCancel(event) {
+    this.setData({ posting: false })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+  onPost(event) {
+    const content = event.detail.text || event.detail.value
+    const { book, comments } = this.data
 
-  },
+    if (!content) return false
+    if (content.length > 12) {
+      wx.showToast({
+        title: '短评最多12个字',
+        icon: 'none',
+      })
+      return false
+    }
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
+    bookModel.postComment(book.id, content)
+    .then(res => {
+      wx.showToast({
+        title: '+ 1',
+        icon: 'none',
+      })
+      comments.unshift({
+        content,
+        nums: 1,
+      })
+      this.setData({
+        comments,
+        posting: false,
+      })
+    })
 
   },
 

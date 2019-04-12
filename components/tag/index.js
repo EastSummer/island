@@ -23,9 +23,8 @@ Component({
    */
   methods: {
     onTap(event) {
-      this.triggerEvent('tapping', {
-        text: this.properties.text
-      })
+      const { text } = this.properties
+      this.triggerEvent('tapping', { text })
     },
   }
 })
