@@ -5,7 +5,10 @@ Component({
    */
   properties: {
     book: Object,
-
+    showLike: {
+      type: Boolean,
+      value: true
+    }
   },
 
   /**
