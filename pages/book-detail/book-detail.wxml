@@ -6,6 +6,7 @@
     <text class='title'>{{book.title}}</text>
     <text class='author'>{{book.author}}</text>
   </view>
+
   <view class="sub-container">
     <text class="headline">短评</text>
     <text class="shadow" wx:if="{{comments === false}}">还没有短评</text>
@@ -17,10 +18,12 @@
       </block>
     </view>
   </view>
+
   <view class="sub-container">
     <text class="headline">内容简介</text>
     <text class="content" decode="{{true}}">{{util.format(book.summary)}}</text>
   </view>
+
   <view class="sub-container">
     <text class="headline">书本信息</text>
     <view class="detail-container">
@@ -40,4 +43,15 @@
       </view>
     </view>
   </view>
+
+
+  <view class="post-container" hidden="{{posting}}">
+    <view bind:tap="onFakePost" class="post-fake">
+      <text>输入短评</text>
+    </view>
+    <view class="like-container">
+      <v-like bind:like="onLike" class="like" like="{{likeStatus}}" count="{{likeCount}}" />
+    </view>
+  </view>
+
 </view>

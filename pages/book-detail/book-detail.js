@@ -1,6 +1,8 @@
 import BookModel from '../../models/book.js'
+import LikeModel from '../../models/like.js'
 
 const bookModel = new BookModel()
+const likeModel = new LikeModel()
 
 Page({
 
@@ -36,6 +38,11 @@ Page({
         })
         wx.hideLoading()
       })
+  },
+
+  onLike(event) {
+    const { behavior } = event.detail
+    likeModel.like(behavior, this.data.book.id, 400) 
   },
 
   /**
