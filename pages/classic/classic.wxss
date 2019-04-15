@@ -32,13 +32,12 @@
 }
 
 .like-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-right:30rpx;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right:30rpx;
+}
 
 .share-btn {
     margin-top: 28rpx;
