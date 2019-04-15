@@ -39,6 +39,22 @@ export default class ClassicModel extends HTTP {
     return Boolean(latestIndex === index)
   }
 
+  getMyFavor(success) {
+    const params = {
+      url: 'classic/favor',
+      success: success
+    }
+    this.request(params)
+  }
+
+  getById(cid, type, success) {
+    let params = {
+      url: `classic/${type}/${cid}`,
+      success: success
+    }
+    this.request(params)
+  }
+
   // 最新期刊号写入缓存
   _setLatestIndex(index) {
     // 同步写入缓存
