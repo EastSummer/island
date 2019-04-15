@@ -41,5 +41,6 @@
 8. 小程序将```properties```和```data```做了合并处理，指向同一个对象
 9. ```behavior```中属性会被覆盖，生命周期则会依次执行
 10. ```<open-data />``` & ```wx.open-data```
+10. ```onLoad``` & ```onshow```
 
 ### [IMOOC-WX](https://coding.imooc.com/learn/list/251.html)
