@@ -19,7 +19,7 @@ Page({
   },
 
   onShow(options) {
-    this.userAuthorized1()
+    this.userAuthorized2()
     this.getMyBookCount()
     this.getMyFavor()
     // wx.getUserInfo({
@@ -59,6 +59,17 @@ Page({
           userInfo: data.userInfo
         })
       })
+  },
+
+  async userAuthorized2() {
+    const data = await promisic(wx.getSetting)()
+    if (data.authSetting['scope.userInfo']) {
+      const { userInfo } = await promisic(wx.getUserInfo)()
+      this.setData({
+        authorized: true,
+        userInfo,
+      })
+    }
   },
 
   userAuthorized() {

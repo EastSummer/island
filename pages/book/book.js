@@ -17,9 +17,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    bookModel.getHotList()
-      .then(books => this.setData({ books }) )
+  async onLoad(options) {
+  // onLoad: async function (options) {
+    const books = await bookModel.getHotList()
+    this.setData({ books })
+      // .then(books => this.setData({ books }) )
   },
 
   onSearching(event) {
