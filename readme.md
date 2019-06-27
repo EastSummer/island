@@ -43,4 +43,8 @@
 10. ```<open-data />``` & ```wx.getUserInfo```
 10. ```onLoad``` & ```onshow```
 
+### Update 2019/6/27
+1. 建议使用 **预发布版本（新增）**
+2. 新提供 **增强编译（babel7）** 可以使用async&await
+
 ### [IMOOC-WX](https://coding.imooc.com/learn/list/251.html)
